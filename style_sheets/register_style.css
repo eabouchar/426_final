@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Reading';
+    src: url("../resources/fonts/reading/Reading_Regular.ttf");
+}
+
+form { 
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    background-image: url("../resources/images/116769713_328595448510535_5975407641802413212_n.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login_form {
+
+   position: relative;
+   margin-right: auto;
+   margin-left: auto;
+   top: 25%;
+   width: 25%;
+   background-color: #ffffff;
+   border-radius: 15%;
+   padding: 5px;
+   opacity: 0.83;
+
+}
+
+.login_header {
+
+    width: 100%;
+    height: 90px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, serif;
+}
+
+.login_header h1 {
+    font-family: "Reading";
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #e97929;
+    font-size: 46px;
+    font-weight: bold;
+    text-shadow: rgba(48, 47, 47, 0.521) 0.5px 0.5px 0px;
+}
