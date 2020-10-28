@@ -17,30 +17,36 @@ require 'includes/form_handlers/login_handler.php';
         <div class="login_form">
 
             <div class ="login_header">
-                <h1>Daisy's Bookshelf</h1>
-                Login or Sign Up
+                <h1>Bookshelf</h1>
+                login or sign up
             </div>
 
-            <form action="register.php" method="post">
-                <input type="text" name="login_username" placeholder="Username" value="<?php 
-                        if(isset($_SESSION['login_username'])) {
-                            echo $_SESSION['login_username'];
-                        }
-                        ?>" required/>
-                <br>
-                <input type="password" name="login_password" placeholder="Password">
-                <br>
+            <div class="login_div">
 
-                <input type="submit" name='login_button' value='Login'/>
-                <?php if(in_array("Username or password incorrect", $error_array)) echo "Username or password incorrect"; ?>
+                <form action="register.php" method="post">
+                    <input type="text" name="login_username" placeholder="Username" value="<?php 
+                            if(isset($_SESSION['login_username'])) {
+                                echo $_SESSION['login_username'];
+                            }
+                            ?>" required/>
+                    <br>
+                    <input type="password" name="login_password" placeholder="Password">
+                    <br>
 
-            </form>
+                    <input type="submit" name='login_button' value='Login'/>
+                    <?php if(in_array("Username or password incorrect", $error_array)) echo "Username or password incorrect"; ?>
+                    <br>
+                    <a href="#" id="register" class="register">Register here</a>
 
+                </form>
 
+            </div>
 
             <!-- 
             inline php: https://www.ntchosting.com/encyclopedia/scripting-and-programming/php/php-in/ -->
             
+            <div class='register_div'>                
+
                 <form action="register.php" method='post'>
                     <input type="text" name="reg_username" placeholder="Username" value="<?php 
                         if(isset($_SESSION['reg_username'])) {
@@ -78,13 +84,15 @@ require 'includes/form_handlers/login_handler.php';
                         else if($password_msg != "") echo $password_msg;?>
 
                     <input type="submit" name='register_button' value='Register'/>
-
+                    <a href="#" id="login" class="login">Login here</a>
                     <?php 
                         if(isset($success_msg)) {
                             echo $success_msg;
                         }
                         ?>
                 </form>
+
+            </div>
 
             </div>
     </div>
