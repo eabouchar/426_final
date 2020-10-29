@@ -7,8 +7,11 @@ require 'includes/form_handlers/login_handler.php';
 
 <html>
 <head>
-    <title>Welcome to bookweb</title>
+    <title>Bookshelf</title>
     <link rel="stylesheet" type="text/css" href="style_sheets/register_style.css" />
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="scripts/register.js"></script>
+    <meta name=viewport content="width=device-width, initial-scale=1, user-scalable=yes">
 </head>
 <body>
 
@@ -84,6 +87,7 @@ require 'includes/form_handlers/login_handler.php';
                         else if($password_msg != "") echo $password_msg;?>
 
                     <input type="submit" name='register_button' value='Register'/>
+                    <br>
                     <a href="#" id="login" class="login">Login here</a>
                     <?php 
                         if(isset($success_msg)) {
