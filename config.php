@@ -4,11 +4,11 @@ ob_start();
 session_start();
 
 $timezome = date_default_timezone_set("America/New_York");
-$con = mysqli_connect("localhost", "root", "", "final_project");
+// $con = mysqli_connect("localhost", "root", "", "final_project");
 
-if(mysqli_connect_errno()) {
-    echo "Failed to connect " + mysqli_connect_errno();
-}
+// if(mysqli_connect_errno()) {
+//     echo "Failed to connect " + mysqli_connect_errno();
+// }
 
 
 ?>
