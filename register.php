@@ -60,23 +60,6 @@ require './login_handler.php';
                     <?php if(in_array("Your username must be between 1 and 25 characters long<br>", $error_array)) echo "Your username must be between 1 and 25 characters long<br>";
                         else if(in_array("That username is unavailable<br>", $error_array)) echo "That username is unavailable<br>";?>
                     
-                    <input type="email" name="reg_email" placeholder="Email" value="<?php 
-                        if(isset($_SESSION['reg_email'])) {
-                            echo $_SESSION['reg_email'];
-                        }
-                        ?>" required>
-                    <br>
-
-                    <input type="email" name="reg_emailc" placeholder="Confirm Email" value="<?php 
-                        if(isset($_SESSION['reg_emailc'])) {
-                            echo $_SESSION['reg_emailc'];
-                        }
-                        ?>"required>
-                    <br>
-                    <?php if(in_array("Emails don't match<br>", $error_array)) echo "Emails don't match<br>";
-                        else if(in_array("Please enter a valid email address<br>", $error_array)) echo "Please enter a valid email address<br>";
-                        else if(in_array("That email is already in use<br>", $error_array)) echo "That email is already in use<br>";?>
-
                     <input type="password" name="reg_password" placeholder="Password" required>
                     <br>
                     <input type="password" name="reg_passwordc" placeholder="Confirm Password" required>
@@ -90,8 +73,8 @@ require './login_handler.php';
                     <br>
                     <a href="#" id="login" class="login">Login here</a>
                     <?php 
-                        if(isset($success_msg)) {
-                            echo $success_msg;
+                        if(isset($register_msg)) {
+                            echo $register_msg;
                         }
                         ?>
                 </form>
